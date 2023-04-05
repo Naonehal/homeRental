@@ -1,8 +1,7 @@
 <template>
     <div>
-        <nav id="navbar"
-            class="px-4 py-4 sm:py-1 bg-white shadow sm:bg-transparent sm:shadow-none sm:fixed w-full z-10 font-serif"
-            :class="{ 'sm:bg-[#151623]': !showBgColor }">
+        <nav id="navbar" class="px-4 py-4 sm:py-1 shadow sm:shadow-none sm:fixed w-full z-10 font-serif"
+            :class="{ 'sm:bg-primary': !showBgColor, 'sm:bg-transparent': showBgColor }">
             <div class="container mx-auto flex flex-col sm:flex-row items-center justify-between">
                 <div class="w-full flex flex-row items-center justify-between">
                     <div class="sm:ml-40">

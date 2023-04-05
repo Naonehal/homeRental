@@ -28,23 +28,23 @@
     <div class="grid gap-6 lg:grid-cols-3 lg:mx-8 xl:mx-16 py-12 px-4 sm:px-20">
         <div class="max-w-xl mx-auto">
             <PropertyCard image="/images/listing.jpg" property-type="Single Family Home"
-                property-address="123 Main St, Anytown USA" price="850,000" @view-listing="openListing" />
+                property-address="119 Main St, Abbotsford, CA" price="1,500" @view-listing="openListing" />
         </div>
         <div class="max-w-xl mx-auto">
             <PropertyCard image="/images/listing.jpg" property-type="Single Family Home"
-                property-address="123 Main St, Anytown USA" price="850,000" @view-listing="openListing" />
+                property-address="120 Main St, Abbotsford, CA" price="1,500" @view-listing="openListing" />
         </div>
         <div class="max-w-xl mx-auto">
             <PropertyCard image="/images/listing.jpg" property-type="Single Family Home"
-                property-address="123 Main St, Anytown USA" price="850,000" @view-listing="openListing" />
+                property-address="121 Main St, Abbotsford, CA" price="1,500" @view-listing="openListing" />
         </div>
         <div class="max-w-xl mx-auto">
             <PropertyCard image="/images/listing.jpg" property-type="Single Family Home"
-                property-address="123 Main St, Anytown USA" price="850,000" @view-listing="openListing" />
+                property-address="122 Main St, Abbotsford, CA" price="1,200" @view-listing="openListing" />
         </div>
         <div class="max-w-xl mx-auto">
             <PropertyCard image="/images/listing.jpg" property-type="Single Family Home"
-                property-address="123 Main St, Anytown USA" price="850,000" @view-listing="openListing" />
+                property-address="123 Main St, Abbotsford, CA" price="1,500" @view-listing="openListing" />
         </div>
 
     </div>
