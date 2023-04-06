@@ -1,6 +1,8 @@
 <?php
 
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\PropertyController;
+use App\Http\Controllers\CityController;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
@@ -34,6 +36,10 @@ Route::get('/contact', function () {
 Route::get('/listing-view', function () {
     return Inertia::render('frontEnd/listing-view');
 })->name('listing-view');
+
+Route::resource('properties', PropertyController::class);
+
+Route::resource('cities', CityController::class);
 
 Route::get('/admin', function () {
     return Inertia::render('Welcome', [
