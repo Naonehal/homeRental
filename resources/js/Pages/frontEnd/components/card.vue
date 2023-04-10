@@ -1,5 +1,5 @@
 <template>
-    <div class="max-w-sm rounded overflow-hidden shadow-lg relative font-serif">
+    <div class="max-w-sm rounded overflow-hidden shadow-lg relative font-serif bg-white">
         <img class="w-full" :src="image" alt="Property Image">
         <div class="absolute top-[12.5rem] right-0 m-2 sm:absolute sm:top-0 sm:right-0">
             <div class="inline-block rounded-full py-1 px-3 bg-hover">
