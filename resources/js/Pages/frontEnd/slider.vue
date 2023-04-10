@@ -1,6 +1,5 @@
 <template>
-    <Swiper class="border-b-2 cursor-grab border-grey-500 max-w-screen-lg m-auto p-4 mt-4" :modules="modules"
-        :space-between="20" :loop="true" :pagination="false"
+    <Swiper class=" max-w-screen-lg mx-auto my-2" :modules="modules" :space-between="20" :loop="true" :pagination="false"
         :autoplay="{ delay: 3000, disableOnInteraction: false, pauseOnMouseEnter: true }">
         <swiper-slide v-for="slide in swiper" :key="slide.id" class="sm:flex sm:justify-evenly">
             <div>
