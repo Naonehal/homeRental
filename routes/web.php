@@ -41,6 +41,11 @@ Route::get('/listing-view/{id?}', function ($id) {
     return Inertia::render('frontEnd/listing-view', ['property' => $property]);
 })->name('listing-view');
 
+Route::get('/search/{string?}', function ($string) {
+            $properties = Property::where('City', $string)->get();
+        return Inertia::render('frontEnd/SearchResults', ['properties' => $properties]);
+})->name('search');
+
 Route::resource('properties', PropertyController::class);
 
 Route::resource('cities', CityController::class);

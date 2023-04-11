@@ -88,5 +88,9 @@
 <script setup>
 import Navbar from "./navbar.vue"
 import Footer from "./footer.vue"
+
+import { Head, Link, useForm } from "@inertiajs/vue3";
+
+
 </script>
 

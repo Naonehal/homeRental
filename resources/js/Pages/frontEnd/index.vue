@@ -16,7 +16,7 @@
                             <div class="flex items-center">
                                 <input type="text" placeholder="Search by city" v-model="form.city"
                                     class="flex-1 px-6 py-4 text-lg border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary" />
-                                <Link :href="route('properties.show', form.city)">
+                                <Link :href="route('search', form.city)">
                                 <button @click="searchProperties"
                                     class="px-8 ml-4 py-4 text-lg font-medium rounded-md text-white bg-primary hover:bg-primary-dark focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary transform hover:scale-105 transition duration-300 ease-in-out">
                                     Search
@@ -41,12 +41,13 @@
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                 <!-- Updated to a responsive grid layout with reduced gap for a more compact and modern look -->
                 <div class="flex justify-center items-center">
-                    <PropertyCard image="/images/listing.jpg" property-type="Single Family Home"
-                        property-address="123 Main St, Abbotsford, CA" price="1,700" @view-listing="openListing" />
+                    <PropertyCard image="/storage/images/apartment-14954579.jpg" property-type="Apartment"
+                        property-address="2485 Hill-Tout Street Abbotsford, BC" price="1200" @view-listing="openListing" />
                 </div>
                 <div class="flex justify-center items-center">
-                    <PropertyCard image="/images/listing.jpg" property-type="Condo"
-                        property-address="456 Elm St, Abbotsford, CA" price="1,500" @view-listing="openListing" />
+                    <PropertyCard image="/storage/images/dead.png" property-type="Condo"
+                        property-address="2838 Livingstone Avenue Abbotsford, BC" price="2600"
+                        @view-listing="openListing" />
                 </div>
                 <div class="flex justify-center items-center">
                     <PropertyCard image="/images/listing.jpg" property-type="Townhouse"
@@ -136,8 +137,8 @@
 import Navbar from "./navbar.vue"
 import Hero from "./hero.vue"
 import Footer from "./footer.vue"
-import PropertyCard from "./components/card.vue"
-import { Link } from "@inertiajs/vue3";
+import PropertyCard from "./components/card2.vue"
+import { Link, useForm } from "@inertiajs/vue3";
 
 const form = useForm({
     city: "",

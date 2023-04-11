@@ -11,20 +11,13 @@
                 <div class="bg-primary w-2/3 border border-none rounded-none py-4 px-8 sm:mb-16">
                     <div class="mt-4 text-xl text-hover">OUR AVAILABLE RENTALS</div>
                     <div class="mt-2 text-xl sm:text-4xl text-white font-bold mb-4">
-                        Explore Our Wide Selection
+                        Search Results for {{ props.properties[0].City }}
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <div class="container mx-auto flex justify-center mt-14">
-        <input type="text" placeholder="Search by city" v-model="searchQuery"
-            class="w-96 px-4 py-2 border border-gray-900 rounded-md shadow-sm focus:outline-none focus:ring-primary focus:border-primary" />
-        <button @click="searchProperties"
-            class="inline-flex items-center px-4 ml-2 py-2 border border-transparent text-base font-medium rounded-md text-white bg-primary hover:bg-primary-dark focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary">
-            Search
-        </button>
-    </div>
+
     <div class="grid gap-6 lg:grid-cols-3 lg:mx-8 xl:mx-16 py-12 px-4 sm:px-20">
         <div class="max-w-xl mx-auto " v-for="(property, index) in props.properties" :key="index">
             <PropertyCard :Image="property.Image" :id="property.id" :property-type="property.Type" :property-address="

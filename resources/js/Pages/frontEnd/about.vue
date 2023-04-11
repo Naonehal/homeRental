@@ -51,8 +51,7 @@
                 </p>
             </div>
             <div class="sm:w-1/2 sm:px-6">
-                <img class="w-full h-auto lg:h-full lg:w-auto"
-                    src="https://via.placeholder.com/640x480.png?text=Property+Image" alt="Property Image">
+                <img class="w-full h-auto lg:h-full lg:w-auto" src="/storage/images/about.jpg" alt="Property Image">
             </div>
         </div>
     </div>

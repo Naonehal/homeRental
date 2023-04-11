@@ -95,8 +95,8 @@ class PropertyController extends Controller
     public function show(string $id)
     {
         //
-        $property = Property::find()->where('city', $id)->first();
-        return Inertia::render('admin/Properties/Show', ['property' => $property]);
+        $properties = Property::find()->where('City', $id)->all();
+        return Inertia::render('frontEnd/SearchResults', ['properties' => $properties]);
     }
 
     /**

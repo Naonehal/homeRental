@@ -18,12 +18,16 @@
         </div>
     </div>
     <div class="container mx-auto flex justify-center mt-14">
-        <input type="text" placeholder="Search by city" v-model="searchQuery"
-            class="w-96 px-4 py-2 border border-gray-900 rounded-md shadow-sm focus:outline-none focus:ring-primary focus:border-primary" />
-        <button @click="searchProperties"
-            class="inline-flex items-center px-4 ml-2 py-2 border border-transparent text-base font-medium rounded-md text-white bg-primary hover:bg-primary-dark focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary">
-            Search
-        </button>
+        <div class="flex items-center">
+            <input type="text" placeholder="Search by city" v-model="form.city"
+                class="flex-1 px-6 py-4 text-lg border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary" />
+            <Link :href="route('search', form.city)">
+            <button @click="searchProperties"
+                class="px-8 ml-4 py-4 text-lg font-medium rounded-md text-white bg-primary hover:bg-primary-dark focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary transform hover:scale-105 transition duration-300 ease-in-out">
+                Search
+            </button>
+            </Link>
+        </div>
     </div>
     <div class="grid gap-6 lg:grid-cols-3 lg:mx-8 xl:mx-16 py-12 px-4 sm:px-20">
         <div class="max-w-xl mx-auto " v-for="(property, index) in props.properties" :key="index">
@@ -49,8 +53,14 @@ import Navbar from "./navbar.vue";
 import Footer from "./footer.vue";
 import PropertyCard from "./components/card.vue";
 
+import { Link, useForm } from "@inertiajs/vue3";
 const props = defineProps({
     properties: Array,
+});
+
+
+const form = useForm({
+    city: "",
 });
 </script>
 

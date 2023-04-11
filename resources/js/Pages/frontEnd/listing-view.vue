@@ -86,7 +86,7 @@
                     Get in touch with the Property Owner today!
                 </h2>
             </div>
-            <div class="bg-primary w-full sm:w-1/4 h-36">
+            <div class="bg-primary w-full sm:w-1/3 h-36">
                 <div class="border-l-8 border-hover h-36">
                     <div class="flex items-center justify-center px-4">
                         <div class="w-1/2 text-left">
@@ -144,8 +144,7 @@ export default {
     },
     methods: {
         computedGmap() {
-            const add = this.property.ApartmentNumber +
-                '-' +
+            const add =
                 this.property.StreetAddress +
                 ', ' +
                 this.property.City +
