@@ -9,10 +9,15 @@
                 <div class="mt-40 text-6xl text-hover font-bold">Discover Quality Living</div>
                 <div class="mt-4 text-4xl sm:w-1/2">with Our Rental Homes.</div>
                 <div class="mt-6">
-                    <button
-                        class="bg-white text-black border border-none py-2 px-4 font-bold rounded-none hover:bg-hover hover:text-white transition duration-500 ease-in-out">
-                        View Listing
-                    </button>
+                    <a href="/listing">
+                        <button
+                            class="bg-white text-black border border-none py-2 px-4 font-bold rounded-none hover:bg-hover hover:text-white transition duration-500 ease-in-out">
+                            View Listing
+                        </button>
+                    </a>
+
+
+
                 </div>
             </div>
 
@@ -24,6 +29,7 @@
 <script>
 
 </script>
+
 
 <style>
 .hero-height {

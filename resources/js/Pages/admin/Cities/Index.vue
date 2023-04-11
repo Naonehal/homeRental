@@ -41,15 +41,15 @@ function destroy(id) {
                             </Link>
                         </div>
 
-                        <div class="block w-full overflow-x-auto">
-                            <table className="table-auto w-full">
+                    <div class="block w-full overflow-x-auto">
+                        <table className="table-auto w-full">
                                 <thead>
                                     <tr className="bg-gray-100">
                                         <th className="px-4 py-2 w-20">No.</th>
 
                                         <th className="px-4 py-2 w-64 ">City Name</th>
 
-                                        <th className="px-4 py-2 w-24 ">No. of Properties</th>
+                                        <!-- <th className="px-4 py-2 w-24 ">No. of Properties</th> -->
 
                                         <th className="px-4 py-2 w-48">Actions</th>
                                     </tr>
@@ -64,9 +64,9 @@ function destroy(id) {
                                             {{ city.name }}
                                         </td>
 
-                                    <td className="border px-4 py-2 text-center">
+                                    <!-- <td className="border px-4 py-2 text-center">
                                         2
-                                    </td>
+                                    </td> -->
 
                                     <td className="border px-4 py-3 text-center">
                                         <Link :href="route('cities.edit', city.id)"
@@ -108,30 +108,30 @@ function destroy(id) {
                                         <th class="px-4 py-2 w-48">Actions</th>
                                     </tr>
                                 </thead>
-                                    <tbody>
-                                        <tr v-for="(city, index) in props.cities" :key="index">
-                                            <td class="border px-4 py-2 text-center">{{ index + 1 }}</td>
-                                            <td class="border px-4 py-2">{{ city.name }}</td>
-                                                                <td class="border px-4 py-2 text-center">2</td>
-                                                                    <td class="border px-4 py-2 text-center">
-                                                                                <a href="{{ route('cities.edit', city.id) }}"
-                                                                                        class="mx-1 px-4 py-2 text-sm text-white bg-green-500 border-blue-500 border hover:bg-blue-600 rounded-sm">
-                                                                                        Edit
-                                                                                    </a>
-                                                                                    <button @click="destroy(city.id)" type="button"
-                                                                                        class="mx-1 px-4 py-2 text-sm text-white bg-red-500 border-red-500 border hover:bg-red-600 rounded-sm">
-                                                                                        Delete
-                                                                                                                                                                </button>
-                                                                                                                                                            </td>
-                                                                                                                                                        </tr>
-                                                                                                                                                    </tbody>
-                                                                                                                                                </table>
-                                                                                                                                            </div>
+                                            <tbody>
+                                                <tr v-for="(city, index) in props.cities" :key="index">
+                                                    <td class="border px-4 py-2 text-center">{{ index + 1 }}</td>
+                                                    <td class="border px-4 py-2">{{ city.name }}</td>
+                                                                        <td class="border px-4 py-2 text-center">2</td>
+                                                                            <td class="border px-4 py-2 text-center">
+                                                                                        <a href="{{ route('cities.edit', city.id) }}"
+                                                                                                class="mx-1 px-4 py-2 text-sm text-white bg-green-500 border-blue-500 border hover:bg-blue-600 rounded-sm">
+                                                                                                Edit
+                                                                                            </a>
+                                                                                            <button @click="destroy(city.id)" type="button"
+                                                                                                class="mx-1 px-4 py-2 text-sm text-white bg-red-500 border-red-500 border hover:bg-red-600 rounded-sm">
+                                                                                                Delete
+                                                                                                                                                                        </button>
+                                                                                                                                                                    </td>
+                                                                                                                                                                </tr>
+                                                                                                                                                            </tbody>
+                                                                                                                                                        </table>
+                                                                                                                                                    </div>
 
+                                                                                                                                                </div>
+                                                                                                                                            </div>
                                                                                                                                         </div>
-                                                                                                                                    </div>
-                                                                                                                                </div>
-                                                                                                                            </div> -->
+                                                                                                                                    </div> -->
 
     </AuthenticatedLayout>
 </template>

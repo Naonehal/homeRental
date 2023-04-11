@@ -60,10 +60,8 @@
                 <div v-for="feature in features" :key="feature.title" class="p-2">
                     <div class="shadow-xl rounded-lg">
                         <div class="px-4 py-2">
-                            <p class="text-gray-700 text-base font-bold">
-                                {{ feature.title }}
-                            </p>
-                            <p class="text-gray-600 mt-2">{{ feature.description }}</p>
+
+                            <p class="text-gray-700 mt-2">{{ feature.description }}</p>
                         </div>
                     </div>
                 </div>
@@ -178,29 +176,34 @@ export default {
             },
             features: [
                 {
-                    title: "1",
-                    description: "test",
+                    description: "Underground parking",
                 },
                 {
-                    title: "2",
-                    description: "test",
+                    description: "Laundry facilities",
                 },
                 {
-                    title: "3",
-                    description: "test",
+                    description: "Fridge",
                 },
                 {
-                    title: "4",
-                    description: "test",
+                    description: "Dishwasher available",
                 },
                 {
-                    title: "5",
-                    description: "test",
+                    description: "Balconies",
                 },
                 {
-                    title: "6",
-                    description: "test",
+                    description: "Ceramic floors",
                 },
+                {
+                    description: "Ceramic floors",
+                },
+                {
+                    description: "Individual thermostats",
+                },
+                {
+                    description: "Alarm system",
+                },
+
+
             ],
             currentIndex: 0,
         };
