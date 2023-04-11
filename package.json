@@ -17,6 +17,7 @@
         "vue": "^3.2.41"
     },
     "dependencies": {
+        "compressorjs": "^1.2.1",
         "swiper": "^9.2.0",
         "vue-slick-carousel": "^1.0.6"
     }

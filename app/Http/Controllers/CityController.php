@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
+
 use Inertia\Inertia;
 use App\Models\City;
 use Illuminate\Http\Request;
@@ -47,6 +48,8 @@ class CityController extends Controller
     public function show(string $id)
     {
         //
+        // $cities = City::find($id);
+        // return Inertia::render('admin/Cities/Show', ['id' => $cities]);
     }
 
     /**

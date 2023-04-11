@@ -6,6 +6,7 @@ use App\Http\Controllers\CityController;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
+use App\Models\Property;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,12 +18,14 @@ use Inertia\Inertia;
 | contains the "web" middleware group. Now create something great!
 |
 */
+
 Route::get('/', function () {
     return Inertia::render('frontEnd/index');
 })->name('index');
 
 Route::get('/listing', function () {
-    return Inertia::render('frontEnd/listing');
+    $properties = Property::all();
+    return Inertia::render('frontEnd/listing', ['properties' => $properties]);
 })->name('listing');
 
 Route::get('/about', function () {
@@ -33,8 +36,9 @@ Route::get('/contact', function () {
     return Inertia::render('frontEnd/contact');
 })->name('contact');
 
-Route::get('/listing-view', function () {
-    return Inertia::render('frontEnd/listing-view');
+Route::get('/listing-view/{id?}', function ($id) {
+    $property = Property::find($id);
+    return Inertia::render('frontEnd/listing-view', ['property' => $property]);
 })->name('listing-view');
 
 Route::resource('properties', PropertyController::class);
@@ -62,5 +66,7 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
+Route::post('upload-file', 'Create@upload');
+Route::post('remove-file', 'Create@remove');
 
-require __DIR__.'/auth.php';
+require __DIR__ . '/auth.php';
