@@ -41,15 +41,15 @@
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                 <!-- Updated to a responsive grid layout with reduced gap for a more compact and modern look -->
                 <div class="flex justify-center items-center">
-                    <PropertyCard image="/storage/images/apartment-14954579.jpg" property-type="Appartment"
+                    <PropertyCard image="/storage/images/apartment-14954579.jpg" property-type="Apartment"
                         property-address="2485 Hill-Tout Street Abbotsford, BC" price="1200" @view-listing="openListing" />
                 </div>
                 <div class="flex justify-center items-center">
-                    <PropertyCard image="/storage/images/image22.png" property-type="Appartment"
+                    <PropertyCard image="/storage/images/image22.png" property-type="Apartment"
                         property-address="6252 6th Street Burnaby, BC" price="2600" @view-listing="openListing" />
                 </div>
                 <div class="flex justify-center items-center">
-                    <PropertyCard image="/storage/images/image8.png" property-type="Appartmenr"
+                    <PropertyCard image="/storage/images/image8.png" property-type="Condo"
                         property-address=" 3304 667 Howe Street Vancouver, BC" price="6950" @view-listing="openListing" />
                 </div>
             </div>
